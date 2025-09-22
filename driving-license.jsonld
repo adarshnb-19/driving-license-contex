@@ -1,3 +1,66 @@
 {
-    "hello":"world"
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "vocab": "https://adarshnb-19.github.io/driving-license-contex/vocab.jsonld",
+    "Party": {
+      "@id": "https://adarshnb-19.github.io/driving-license-contex/driving-license.jsonld#Party",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "name": "vocab:name",
+        "idScheme": {
+          "@id": "vocab:idScheme",
+          "@type": "https://adarshnb-19.github.io/driving-license-contex/driving-license.jsonld#IdentifierScheme"
+        },
+        "description": "vocab:description",
+        "registeredId": "vocab:registeredId",
+        "otherIdentifier": "vocab:otherIdentifier",
+        "industryCategory": "vocab:industryCategory",
+        "organisationWebsite": "vocab:organisationWebsite",
+        "registrationCountry": "vocab:registrationCountry"
+      }
+    },
+    "BinaryFile": {
+      "@id": "https://adarshnb-19.github.io/driving-license-contex/driving-license.jsonld#BinaryFile",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "fileName": "vocab:fileName",
+        "fileType": "vocab:fileType"
+      }
+    },
+    "IdentifierScheme": {
+      "@id": "https://adarshnb-19.github.io/driving-license-contex/driving-license.jsonld#IdentifierScheme",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "name": "vocab:name",
+        "trustmark": {
+          "@id": "vocab:trustmark",
+          "@type": "https://adarshnb-19.github.io/driving-license-contex/driving-license.jsonld#BinaryFile"
+        },
+        "issuingAuthority": "vocab:issuingAuthority"
+      }
+    },
+    "ConformityAttestation": {
+      "@id": "https://adarshnb-19.github.io/driving-license-contex/driving-license.jsonld#ConformityAttestation",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "name": "vocab:name",
+        "description": "vocab:description",
+        "assessorLevel": "vocab:assessorLevel",
+        "issuedToParty": {
+          "@id": "vocab:issuedToParty",
+          "@type": "https://adarshnb-19.github.io/driving-license-contex/driving-license.jsonld#Party"
+        },
+        "assessmentLevel": "vocab:assessmentLevel"
+      }
+    }
+  }
 }

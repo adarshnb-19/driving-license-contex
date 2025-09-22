@@ -1,0 +1,533 @@
+{
+  "@context": {
+    "label": "http://www.w3.org/2000/01/rdf-schema#label",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "ext": "http://example.org/jsonld",
+    "vocab": "https://adarshnb-19.github.io/driving-license-contex/vocab.jsonld",
+    "Address": {
+      "@id": "https://adarshnb-19.github.io/driving-license-contex/vocab.jsonld#Address",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "country": "vocab:country",
+        "locality": "vocab:locality",
+        "postal_code": "vocab:postal_code",
+        "civic_address": "vocab:civic_address",
+        "municipality_name": "vocab:municipality_name",
+        "province_or_territory": "vocab:province_or_territory"
+      }
+    },
+    "Evidence": {
+      "@id": "https://adarshnb-19.github.io/driving-license-contex/vocab.jsonld#Evidence",
+      "@context": {
+        "@version": 1.1,
+        "id": "@id",
+        "type": "@type",
+        "evidence_date": "vocab:evidence_date",
+        "evidence_uuid": "vocab:evidence_uuid",
+        "evidence_source": "vocab:evidence_source"
+      }
+    }
+  },
+  "familyName": {
+    "id": "ext:familyName",
+    "label": "This is the label for familyName."
+  },
+  "givenName": {
+    "id": "ext:givenName",
+    "label": "This is the label for givenName"
+  },
+  "legalName": {
+    "id": "ext:legalName",
+    "label": "This is the label for legalName"
+  },
+  "streetName": {
+    "id": "ext:streetName",
+    "label": "This is the label for streetName"
+  },
+  "postalAddress": {
+    "id": "ext:postalAddress",
+    "label": "This is the label for postalAddress"
+  },
+  "batchName": {
+    "id": "ext:batchName",
+    "label": "This is the label for batchName"
+  },
+  "id": {
+    "id": "ext:id",
+    "label": "This is the label for batchName"
+  },
+  "name": {
+    "id": "ext:name",
+    "label": "This is the label for name"
+  },
+  "assessorLevel": {
+    "id": "ext:assessorLevel",
+    "label": "This is the label for assessorLevel"
+  },
+  "assessmentLevel": {
+    "id": "ext:assessmentLevel",
+    "label": "This is the label for assessmentLevel"
+  },
+  "attestationType": {
+    "id": "ext:attestationType",
+    "label": "This is the label for attestationType"
+  },
+  "description": {
+    "id": "ext:description",
+    "label": "This is the label for description"
+  },
+  "issuedToParty": {
+    "id": "ext:issuedToParty",
+    "label": "This is the label for issuedToParty"
+  },
+  "registeredId": {
+    "id": "ext:registeredId",
+    "label": "This is the label for registeredId"
+  },
+  "idScheme": {
+    "id": "ext:idScheme",
+    "label": "This is the label for idScheme"
+  },
+  "registrationCountry": {
+    "id": "ext:registrationCountry",
+    "label": "This is the label for registrationCountry"
+  },
+  "organisationWebsite": {
+    "id": "ext:organisationWebsite",
+    "label": "This is the label for organisationWebsite"
+  },
+  "industryCategory": {
+    "id": "ext:industryCategory",
+    "label": "This is the label for industryCategory"
+  },
+  "otherIdentifier": {
+    "id": "ext:otherIdentifier",
+    "label": "This is the label for otherIdentifier"
+  },
+  "authorisation": {
+    "id": "ext:authorisation",
+    "label": "This is the label for authorisation"
+  },
+  "trustmark": {
+    "id": "ext:fileName",
+    "label": "This is the label for fileName"
+  },
+  "fileName": {
+    "id": "ext:fileName",
+    "label": "This is the label for fileName"
+  },
+  "fileType": {
+    "id": "ext:fileType",
+    "label": "This is the label for fileType"
+  },
+  "file": {
+    "id": "ext:file",
+    "label": "This is the label for file"
+  },
+  "issuingAuthority": {
+    "id": "ext:issuingAuthority",
+    "label": "This is the label for issuingAuthority"
+  },
+  "accreditationCertificate": {
+    "id": "ext:accreditationCertificate",
+    "label": "This is the label for accreditationCertificate"
+  },
+  "conformityCertificate": {
+    "id": "ext:conformityCertificate",
+    "label": "This is the label for conformityCertificate"
+  },
+  "linkURL": {
+    "id": "ext:linkURL",
+    "label": "This is the label for linkURL"
+  },
+  "linkName": {
+    "id": "ext:linkName",
+    "label": "This is the label for linkName"
+  },
+  "hashDigest": {
+    "id": "ext:hashDigest",
+    "label": "This is the label for hashDigest"
+  },
+  "hashMethod": {
+    "id": "ext:hashMethod",
+    "label": "This is the label for hashMethod"
+  },
+  "encryptionMethod": {
+    "id": "ext:encryptionMethod",
+    "label": "This is the label for encryptionMethod"
+  },
+  "auditableEvidence": {
+    "id": "ext:auditableEvidence",
+    "label": "This is the label for auditableEvidence"
+  },
+  "scope": {
+    "id": "ext:scope",
+    "label": "This is the label for scope"
+  },
+  "issuingParty": {
+    "id": "ext:issuingParty",
+    "label": "This is the label for issuingParty"
+  },
+  "issueDate": {
+    "id": "ext:issueDate",
+    "label": "This is the label for issueDate"
+  },
+  "assessment": {
+    "id": "ext:assessment",
+    "label": "This is the label for assessment"
+  },
+  "assessmentDate": {
+    "id": "ext:assessmentDate",
+    "label": "This is the label for assessmentDate"
+  },
+  "referenceStandard": {
+    "id": "ext:referenceStandard",
+    "label": "This is the label for referenceStandard"
+  },
+  "referenceRegulation": {
+    "id": "ext:referenceRegulation",
+    "label": "This is the label for referenceRegulation"
+  },
+  "jurisdictionCountry": {
+    "id": "ext:jurisdictionCountry",
+    "label": "This is the label for jurisdictionCountry"
+  },
+  "administeredBy": {
+    "id": "ext:administeredBy",
+    "label": "This is the label for administeredBy"
+  },
+  "effectiveDate": {
+    "id": "ext:effectiveDate",
+    "label": "This is the label for effectiveDate"
+  },
+  "assessmentCriteria": {
+    "id": "ext:assessmentCriteria",
+    "label": "This is the label for assessmentCriteria"
+  },
+  "thresholdValues": {
+    "id": "ext:thresholdValues",
+    "label": "This is the label for thresholdValues"
+  },
+  "metricName": {
+    "id": "ext:metricName",
+    "label": "This is the label for metricName"
+  },
+  "metricValue": {
+    "id": "ext:metricValue",
+    "label": "This is the label for metricValue"
+  },
+  "value": {
+    "id": "ext:value",
+    "label": "This is the label for value"
+  },
+  "unit": {
+    "id": "ext:unit",
+    "label": "This is the label for unit"
+  },
+  "score": {
+    "id": "ext:score",
+    "label": "This is the label for score"
+  },
+  "accuracy": {
+    "id": "ext:accuracy",
+    "label": "This is the label for accuracy"
+  },
+  "declaredValue": {
+    "id": "ext:declaredValue",
+    "label": "This is the label for declaredValue"
+  },
+  "conformance": {
+    "id": "ext:conformance",
+    "label": "This is the label for conformance"
+  },
+  "conformityTopic": {
+    "id": "ext:conformityTopic",
+    "label": "This is the label for conformityTopic"
+  },
+  "assessedProduct": {
+    "id": "ext:assessedProduct",
+    "label": "This is the label for assessedProduct"
+  },
+  "batchNumber": {
+    "id": "ext:batchNumber",
+    "label": "This is the label for batchNumber"
+  },
+  "productImage": {
+    "id": "ext:productImage",
+    "label": "This is the label for productImage"
+  },
+  "productCategory": {
+    "id": "ext:productCategory",
+    "label": "This is the label for productCategory"
+  },
+  "furtherInformation": {
+    "id": "ext:furtherInformation",
+    "label": "This is the label for furtherInformation"
+  },
+  "producedByParty": {
+    "id": "ext:producedByParty",
+    "label": "This is the label for producedByParty"
+  },
+  "producedAtFacility": {
+    "id": "ext:producedAtFacility",
+    "label": "This is the label for producedAtFacility"
+  },
+  "dimensions": {
+    "id": "ext:dimensions",
+    "label": "This is the label for dimensions"
+  },
+  "productionDate": {
+    "id": "ext:productionDate",
+    "label": "This is the label for productionDate"
+  },
+  "countryOfProduction": {
+    "id": "ext:countryOfProduction",
+    "label": "This is the label for countryOfProduction"
+  },
+  "assessedFacility": {
+    "id": "ext:assessedFacility",
+    "label": "This is the label for assessedFacility"
+  },
+  "countryOfOperation": {
+    "id": "ext:countryOfOperation",
+    "label": "This is the label for countryOfOperation"
+  },
+  "processCategory": {
+    "id": "ext:processCategory",
+    "label": "This is the label for processCategory"
+  },
+  "operatedByParty": {
+    "id": "ext:operatedByParty",
+    "label": "This is the label for operatedByParty"
+  },
+  "locationInformation": {
+    "id": "ext:locationInformation",
+    "label": "This is the label for locationInformation"
+  },
+  "plusCode": {
+    "id": "ext:plusCode",
+    "label": "This is the label for plusCode"
+  },
+  "geoLocation": {
+    "id": "ext:geoLocation",
+    "label": "This is the label for geoLocation"
+  },
+  "coordinates": {
+    "id": "ext:coordinates",
+    "label": "This is the label for coordinates"
+  },
+  "geoBoundary": {
+    "id": "ext:geoBoundary",
+    "label": "This is the label for geoBoundary"
+  },
+  "data": {
+    "id": "ext:data",
+    "label": "This is the label for data"
+  },
+  "address": {
+    "id": "ext:address",
+    "label": "This is the label for address"
+  },
+  "streetAddress": {
+    "id": "ext:streetAddress",
+    "label": "This is the label for streetAddress"
+  },
+  "postalCode": {
+    "id": "ext:postalCode",
+    "label": "This is the label for postalCode"
+  },
+  "addressLocality": {
+    "id": "ext:addressLocality",
+    "label": "This is the label for addressLocality"
+  },
+  "addressRegion": {
+    "id": "ext:addressRegion",
+    "label": "This is the label for addressRegion"
+  },
+  "addressCountry": {
+    "id": "ext:addressCountry",
+    "label": "This is the label for addressCountry"
+  },
+  "IDverifiedByCAB": {
+    "id": "ext:IDverifiedByCAB",
+    "label": "This is the label for IDverifiedByCAB"
+  },
+  "assessedOrganisation": {
+    "id": "ext:assessedOrganisation",
+    "label": "This is the label for assessedOrganisation"
+  },
+  "auditor": {
+    "id": "ext:auditor",
+    "label": "This is the label for auditor"
+  },
+  "type": {
+    "id": "ext:type",
+    "label": "This is the label for type"
+  },
+  "source": {
+    "id": "ext:source",
+    "label": "This is the label for source"
+  },
+  "verifier": {
+    "id": "ext:verifier",
+    "label": "This is the label for verifier"
+  },
+  "timestamp": {
+    "id": "ext:timestamp",
+    "label": "This is the label for timestamp"
+  },
+  "property_id": {
+    "id": "ext:property_id",
+    "label": "This is the label for property_id"
+  },
+  "ownership_type": {
+    "id": "ext:ownership_type",
+    "label": "This is the label for ownership_type"
+  },
+  "given_names": {
+    "id": "ext:given_names",
+    "label": "This is the label for given_names"
+  },
+  "family_name": {
+    "id": "ext:family_name",
+    "label": "This is the label for family_name"
+  },
+  "birthdate_dateint": {
+    "id": "ext:birthdate_dateint",
+    "label": "This is the label for birthdate_dateint"
+  },
+  "verified_email": {
+    "id": "ext:verified_email",
+    "label": "This is the label for verified_email"
+  },
+  "homeowner": {
+    "id": "ext:homeowner",
+    "label": "This is the label for homeowner"
+  },
+  "profession": {
+    "id": "ext:profession",
+    "label": "This is the label for profession"
+  },
+  "evidence_governance": {
+    "id": "ext:evidence_governance",
+    "label": "This is the label for evidence_governance"
+  },
+  "occupancy_status": {
+    "id": "ext:occupancy_status",
+    "label": "This is the label for occupancy_status"
+  },
+  "mortgage_flag": {
+    "id": "ext:mortgage_flag",
+    "label": "This is the label for mortgage_flag"
+  },
+  "profession_category": {
+    "id": "ext:profession_category",
+    "label": "This is the label for profession_category"
+  },
+  "licence_number": {
+    "id": "ext:licence_number",
+    "label": "This is the label for licence_number"
+  },
+  "licence_status": {
+    "id": "ext:licence_status",
+    "label": "This is the label for licence_status"
+  },
+  "business_name": {
+    "id": "ext:business_name",
+    "label": "This is the label for business_name"
+  },
+  "jurisdiction": {
+    "id": "ext:jurisdiction",
+    "label": "This is the label for jurisdiction"
+  },
+  "business_address": {
+    "id": "vocab:Address",
+    "label": "This is the label for business_address"
+  },
+  "insurance_coverage": {
+    "id": "ext:insurance_coverage",
+    "label": "This is the label for insurance_coverage"
+  },
+  "credential_schema": {
+    "id": "ext:credential_schema",
+    "label": "This is the label for credential_schema"
+  },
+  "terms_of_use": {
+    "id": "ext:terms_of_use",
+    "label": "This is the label for terms_of_use"
+  },
+  "evidence": {
+    "id": "ext:evidence",
+    "label": "This is the label for evidence"
+  },
+  "proof_level": {
+    "id": "ext:proof_level",
+    "label": "This is the label for proof_level"
+  },
+  "self_onboarded": {
+    "id": "ext:self_onboarded",
+    "label": "This is the label for self_onboarded"
+  },
+  "issuance_date": {
+    "id": "ext:issuance_date",
+    "label": "This is the label for issuance_date"
+  },
+  "expiration_date": {
+    "id": "ext:expiration_date",
+    "label": "This is the label for expiration_date"
+  },
+  "issuer": {
+    "id": "ext:issuer",
+    "label": "This is the label for issuer"
+  },
+  "civic_address": {
+    "id": "ext:civic_address",
+    "label": "This is the label for civic_address"
+  },
+  "municipality_name": {
+    "id": "ext:municipality_name",
+    "label": "This is the label for municipality_name"
+  },
+  "province_or_territory": {
+    "id": "ext:province_or_territory",
+    "label": "This is the label for province_or_territory"
+  },
+  "postal_code": {
+    "id": "ext:postal_code",
+    "label": "This is the label for postal_code"
+  },
+  "evidence_source": {
+    "id": "ext:evidence_source",
+    "label": "This is the label for evidence_source"
+  },
+  "evidence_date": {
+    "id": "ext:evidence_date",
+    "label": "This is the label for evidence_date"
+  },
+  "evidence_uuid": {
+    "id": "ext:evidence_uuid",
+    "label": "This is the label for evidence_uuid"
+  },
+  "country": {
+    "id": "ext:country",
+    "label": "This is the label for country"
+  },
+  "locality": {
+    "id": "ext:locality",
+    "label": "This is the label for locality"
+  },
+  "title_evidence": {
+    "id": "vocab:Evidence",
+    "label": "This is the label for title_evidence"
+  },
+  "identity_evidence": {
+    "id": "vocab:Evidence",
+    "label": "This is the label for identity_evidence"
+  },
+  "property_address": {
+    "id": "vocab:Address",
+    "label": "This is the label for property_address"
+  }
+}
